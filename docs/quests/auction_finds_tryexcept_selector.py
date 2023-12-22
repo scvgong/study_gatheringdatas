@@ -35,8 +35,9 @@ for element_item in element_bundle:
 
         pass
     except:
-        # old_price = ""
-        # new_price = ""
+        old_price = ""
+        new_price = ""
+        delivery = ""
         pass
     finally:
         pass
