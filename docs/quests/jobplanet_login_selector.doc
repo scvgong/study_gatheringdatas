@@ -1,0 +1,3 @@
+Id : #user_email
+Pwd : #user_password
+In : #signInSignInCon > div.signInsignIn_wrap > div > section.section_email.er_r > fieldset > button
