@@ -17,20 +17,26 @@ selector_value = "div > div.info"
 element_bundle = browser.find_elements(by=By.CSS_SELECTOR, value = selector_value)
 
 for element_item in element_bundle:
-    # 상품 제목
-    element_title = element_item.find_element(by=By.CSS_SELECTOR, value="div.info > em > a")
-    title = element_title.text
+    
     try:
+        # 상품 제목
+        selector_title = "div.info > em > a"
+        element_title = element_item.find_element(by=By.CSS_SELECTOR, value=selector_title)
+        title = element_title.text
+
         # 판매 원가
-        element_old_price = element_item.find_element(by=By.CSS_SELECTOR, value="span > strike > span")
+        selector_old_price = "span > strike > span"
+        element_old_price = element_item.find_element(by=By.CSS_SELECTOR, value=selector_old_price)
         old_price = element_old_price.text
 
         # 변경 가격
-        element_new_price = element_item.find_element(by=By.CSS_SELECTOR, value="li.d_price > span.sale > span")
+        selector_new_price = "li.d_price > span.sale > span"
+        element_new_price = element_item.find_element(by=By.CSS_SELECTOR, value=selector_new_price)
         new_price = element_new_price.text
 
         # 배송 방법(3가지)
-        element_delivery = element_item.find_element(by=By.CSS_SELECTOR, value="div.icon > div")
+        selector_delivery = "div.icon > div"
+        element_delivery = element_item.find_element(by=By.CSS_SELECTOR, value=selector_delivery)
         delivery = element_delivery.text.split()
 
         pass
