@@ -12,7 +12,7 @@ pass
 
 # - 정보 획득
 from selenium.webdriver.common.by import By
-# 상품 제목
+# 상품 전체
 selector_value = "div > div.info"
 element_bundle = browser.find_elements(by=By.CSS_SELECTOR, value = selector_value)
 
