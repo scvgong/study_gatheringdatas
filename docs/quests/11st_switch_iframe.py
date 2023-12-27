@@ -48,7 +48,7 @@ for element_item in review_list:
         name = element_name.text
 
         # 선택옵션 div.option
-        selector_option = "div.option"
+        selector_option = "div.option > dd"
         element_option = element_item.find_element(by=By.CSS_SELECTOR,value=selector_option)
         option = element_option.text
 
