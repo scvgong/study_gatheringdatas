@@ -43,7 +43,7 @@ for index in range(len(element_courts)) :
     else:
         break
 
-    element_court = browser.find_element(by=By.CSS_SELECTOR, value="#idJiwonNm > option")
+    element_court = browser.find_element(by=By.CSS_SELECTOR, value="#idJiwonNm > option:nth-child({})".format(index+1))
     court = element_court.text
 
     # 검색 클릭 : #contents > form > div.tbl_btn > a:nth-child(1) > img

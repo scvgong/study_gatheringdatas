@@ -16,7 +16,7 @@ from selenium.webdriver.support.ui import Select
 # 국가 selectbox 선택
 selector_element = '#country'
 element_country = browser.find_element(by=By.CSS_SELECTOR,value=selector_element)
-Select(element_country).select_by_index(1)
+Select(element_country).select_by_index(1) # index값을 찾아주는 명령어
 
 # 주 selectbox 선택
 selector_element = '#state'
